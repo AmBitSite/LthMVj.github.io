@@ -14,18 +14,22 @@ body{
 .wrapper{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background: url(../img/bg.png) no-repeat;
     background-size: cover;
 }
 .nav{
-
-    height: 40px;
+    height: 7vh;
     width: 100vw;
     justify-content: flex-end;
     align-items: center;
     background-color: rgba(255, 255, 255, .5);
+}
+.nav__header{
+    margin: auto;
+    font-size: 220%;
+    font-family: 'Dokdo', cursive;
 }
 .nav__icon{
     display: flex;
@@ -90,5 +94,32 @@ body{
     text-align: center;
     font-size: 30px;
     font-family: 'Dokdo', cursive;
-
+}
+.content{
+    display: flex;
+    width: 100vw;
+    height: 93vh;
+    background: rgba(255, 255, 255, .2);
+}
+.block-menu-player{
+    display: flex;
+    flex-direction: column;
+}
+.content-menu{
+    display: flex;
+    width: 70vw;
+    height: 63vh;
+    background: rgba(255, 255, 255, .2);
+}
+.content-playlist{
+    display: flex;
+    width: 30vw;
+    height: 93vh;
+    background: rgba(255, 255, 255, .5);
+}
+.player{
+    display: flex;
+    height: 30vh;
+    width: 70vw;
+    background: rgba(255, 255, 255, 1);
 }
