@@ -4,23 +4,20 @@ let login = document.getElementById('input_login'),
     navBar = document.querySelector('.nav'),
     btnOut = document.querySelector('.nav__out');
 
+$( ".nav" ).hide();
 welcomePage.addEventListener('keydown', (e)=>{
    if(e.keyCode == 13){
         if((login.value =='Pavel')&&(pass.value=='Rosolko')){
-            welcomePage.classList.remove('d-f');
-            welcomePage.classList.add('d-none');
-            navBar.classList.remove('d-none');
-            navBar.classList.add('d-f');
+            $( ".contain" ).hide( "slow", function() {
+                $( ".nav" ).show( "slow");
+            });
         };
     }
 });
 
 btnOut.addEventListener('click', ()=>{
-    if((login.value =='Pavel')&&(pass.value=='Rosolko')){
-        navBar.classList.remove('d-f');
-        navBar.classList.add('d-none');
-        welcomePage.classList.remove('d-none');
-        welcomePage.classList.add('d-f');
-    };
+    $( ".nav" ).hide( "slow", function() {
+        $( ".contain" ).show( "slow");
+        });
 });
         
