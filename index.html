@@ -4,20 +4,31 @@
     <meta charset="UTF-8">
     <title>LthMVj</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/playerlist.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
+   <div id="preloader">
+       <div id="cont">
+           <div class="round" style="background-color: darkcyan"></div>
+           <div class="round" style="background-color: #3eaaaa"></div>
+           <div class="round" style="background-color: #aae0e0"></div>
+           <div class="round" style="background-color: #ffffff"></div>
+       </div>
+       <div id="loading">Loading</div>
+    </div>
     <div class="wrapper">
         <nav class="nav d-f">
             <span class="nav__header">Welcome to LthMVj! The Best in world music platform!</span>
            <i class="nav__icon"></i>
-           <span class="nav__name">Pavel</span>
+           <span class="nav__name"></span>
            <button class="nav__out">Go Out</button>
        </nav>
         <div class="contain d-f">
            <h1 class="contain__header">Welcome to LthMVj</h1>
            <div class="block-input">
                <input class="contain__input" id="input_login" type="text" placeholder="Enter you Login">
-                <input class="contain__input" id="input_pass" type="password" placeholder="Enter you Password">
+                
            </div>
         </div>
         <section class="content">
@@ -27,10 +38,50 @@
                 </article>
                 <aside class="player"> проигрыватель</aside>
             </div>
-            <aside class="content-playlist">плейлист</aside>
+            <aside class="content-playlist">
+                <div class="content-playlist-header">
+                    <img class="content-playlist-song-img" src="img/1.jpeg" alt="song-name">
+                    <div class="content-playlist-text">
+                        <h3 class="content-playlist-text-main">Song name</h3>
+                        <div class="content-playlist-text-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <h4 class="content-playlist-text-group">
+                            Ранетки
+                        </h4>
+                    </div>
+                </div>
+                <div class="filter">
+                    <button class="btn" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        Фильтер
+                    </button>
+                    <div class="collapse" id="collapseExample">
+                        <div class="card card-body">
+                            <p class="filter-variant">По алфавиту</p>
+                            <p class="filter-variant">По исполнителю</p>
+                            <p class="filter-variant">По хер</p>
+                        </div>
+                    </div>
+                </div>
+                <ul class="playlist-songs">
+                    <li class="song">
+                        <span class="playlist-songs-name">Ду хаст</span>
+                        <span class="playlist-songs-dash">-</span>
+                        <span class="playlist-songs-group">Рамштайн</span>
+                        <span class="playlist-songs-time">4:23</span>
+                    </li>
+                </ul>
+            </aside>
         </section>
     </div>
-    <script src="scripts/jquery-3.3.1.min.js"></script>
+    <script src="libs/jquery-3.3.1.min.js"></script>
+    <script src="libs/bootstrap.min.js"></script>
+    <script src="libs/mustache.js"></script>
+    <script src="libs/howler.min.js"></script>
     <script src="scripts/script.js"></script>
 </body>
 </html>

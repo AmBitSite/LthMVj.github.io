@@ -1,0 +1,69 @@
+.content-playlist{
+    width: 30vw;
+    height: 93vh;
+    background:rgba(7%, 4%, 38%, .5);;
+    overflow: auto;
+    color: #fff;
+    font-family: 'Neucha', cursive;
+}
+.content-playlist-header {
+    display: flex;
+}
+.content-playlist-song-img {
+    width: 80px;
+    height: 80px;
+    margin: 10px 10px 0 10px;
+}
+.content-playlist-text-main {
+    margin: 10px 0 5px 0;
+}
+.content-playlist-text-group {
+    margin: 5px 0 0 0;
+}
+.fa-star {
+    color: gold;
+}
+
+.btn{
+    background: none;
+    font-size: 20px;
+    border: none;
+    outline: none;
+}
+.btn:hover {
+    background-color:#fff;
+}
+.card-body {
+    background: none;
+    border: none;
+}
+.filter-variant {
+    cursor: pointer;
+    color:#000
+}
+.filter-variant:hover {
+    color: gold;
+}
+.song {
+    list-style: none;
+    width: 100%;
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.playlist-songs-name {
+    margin-left: 5px;
+    font-weight: bold;
+}
+.playlist-songs-dash {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.playlist-songs-group {
+    color:#bfbfbf;
+}
+
+.playlist-songs-time {
+    float: right;
+    margin-right: 10px;
+}
