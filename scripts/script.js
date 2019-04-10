@@ -23,9 +23,9 @@ $(function(){
 let login = document.getElementById('input_login'),
     welcomePage = document.querySelector('.contain'),
     navBar = document.querySelector('.nav'),
-    btnOut = document.querySelector('.nav__out');
+    btnOut = document.querySelector('.nav__out'),
+    dataJSON ={};
     $(".nav__name").text(localStorage.key(localStorage.length-1));
-    let wrapper1 = document.querySelector('.content-menu');
 
 function hideLoginPage(){
     $( ".contain" ).hide("slow");
@@ -48,9 +48,10 @@ btnOut.addEventListener('click', ()=>{
     localStorage.removeItem($(".nav__name").text());
 });
 
-   
-
-
+$.getJSON("scripts/genres.json", function(data) {
+    dataJSON.genres = data.genres;
+})
+console.log(dataJSON);
 
 
 
