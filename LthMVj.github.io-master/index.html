@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>LthMVj</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="nav d-f">
+            <span class="nav__header">Welcome to LthMVj! The Best in world music platform!</span>
+           <i class="nav__icon"></i>
+           <span class="nav__name">Pavel</span>
+           <button class="nav__out">Go Out</button>
+       </nav>
+        <div class="contain d-f">
+           <h1 class="contain__header">Welcome to LthMVj</h1>
+           <div class="block-input">
+               <input class="contain__input" id="input_login" type="text" placeholder="Enter you Login">
+                <input class="contain__input" id="input_pass" type="password" placeholder="Enter you Password">
+           </div>
+        </div>
+        <section class="content">
+            <div class="block-menu-player">
+                <article class="content-menu">
+                   тут у нас будет выбор жанра
+                </article>
+                <aside class="player"> проигрыватель</aside>
+            </div>
+            <aside class="content-playlist">
+                <div class="content-playlist-header">
+                    <img class="content-playlist-song-img" src="img/1.jpeg" alt="song-name">
+                    <div class="content-playlist-text">
+                        <h3 class="content-playlist-text-main">Song name</h3>
+                        <div class="content-playlist-text-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <h4 class="content-playlist-text-group">
+                            Ранетки
+                        </h4>
+                    </div>
+                </div>
+                <div class="filter">
+                    <button class="btn" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        Фильтер
+                    </button>
+
+                    <div class="collapse" id="collapseExample">
+                        <div class="card card-body">
+                            <p class="filter-variant">По алфавиту</p>
+                            <p class="filter-variant">По исполнителю</p>
+                            <p class="filter-variant">По хер</p>
+                        </div>
+                    </div>
+                </div>
+                <ul class="playlist-songs">
+                    <li class="song">
+                        <span class="playlist-songs-name">Ду хаст</span>
+                        <span class="playlist-songs-dash">-</span>
+                        <span class="playlist-songs-group">Рамштайн</span>
+                        <span class="playlist-songs-time">4:23</span>
+                    </li>
+                </ul>
+            </aside>
+        </section>
+    </div>
+
+<script type="text/javascript" src="data.json"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="scripts/script.js"></script>
+</body>
+</html>
