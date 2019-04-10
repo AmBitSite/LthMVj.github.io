@@ -12,17 +12,17 @@
           },
           "Natural": {
             "rating": 1,
-            "time": "3:08",
+            "time": "3:09",
             "src": "./music/imagine_dragons_natural.mp3"
           },
           "Thunder": {
             "rating": 1,
-            "time": "3:07",
+            "time": "3:08",
             "src": "./music/imagine_dragons_thunder.mp3"
           },
           "Radioactive": {
             "rating": 1,
-            "time": "3:07",
+            "time": "3:05",
             "src": "./music/imagine_dragons_radioactive.mp3"
           }
         }
@@ -33,12 +33,12 @@
         "songs": {
           "Wind Of Change": {
             "rating": 1,
-            "time": "5:12",
+            "time": "5:15",
             "src": "./music/scorpions_wind_of_change.mp3"
           },
           "Still Loving You": {
             "rating": 1,
-            "time": "6:28",
+            "time": "6:12",
             "src": "./music/scorpions_still_loving_you.mp3"
           },
           "Send Me An Angel": {
@@ -48,7 +48,7 @@
           },
           "Humanity": {
             "rating": 1,
-            "time": "5:26",
+            "time": "4:50",
             "src": "./music/scorpions_humanity.mp3"
           }
         }
@@ -61,12 +61,12 @@
         "songs": {
           "Lose Yourself": {
             "rating": 1,
-            "time": "5:26",
+            "time": "5:20",
             "src": "./music/eminem_lose_yourself.mp3"
           },
           "Stan": {
             "rating": 1,
-            "time": "6:43",
+            "time": "6:44",
             "src": "./music/eminem_stan.mp3"
           },
           "Not Afraid": {
@@ -87,22 +87,22 @@
         "songs": {
           "Candy Shop": {
             "rating": 1,
-            "time": "3:28",
+            "time": "3:29",
             "src": "./music/50_cent_candy_shop.mp3"
           },
           "In Da Club": {
             "rating": 1,
-            "time": "3:13",
+            "time": "3:14",
             "src": "./music/50_cent_in_da_club.mp3"
           },
           "P.I.M.P.": {
             "rating": 1,
-            "time": "4:10",
+            "time": "4:16",
             "src": "./music/50_cent_p_i_m_p.mp3"
           },
           "Ayo Technology": {
             "rating": 1,
-            "time": "4:07",
+            "time": "4:12",
             "src": "./music/50_cent_ayo_technology.mp3"
           }
         }
@@ -120,17 +120,17 @@
           },
           "Breathe": {
             "rating": 1,
-            "time": "5:34",
+            "time": "5:35",
             "src": "./music/the_prodigy_breathe.mp3"
           },
           "Smack My Bitch Up": {
             "rating": 1,
-            "time": "5:43",
+            "time": "4:45",
             "src": "./music/the_prodigy_smack_my_bitch_up.mp3"
           },
           "Voodoo People": {
             "rating": 1,
-            "time": "6:27",
+            "time": "6:26",
             "src": "./music/the_prodigy_voodoo_people.mp3"
           }
         }
@@ -141,22 +141,22 @@
         "songs": {
           "Natural Blues": {
             "rating": 1,
-            "time": "3:02",
+            "time": "4:14",
             "src": "./music/moby_natural_blues.mp3"
           },
           "Lift Me Up": {
             "rating": 1,
-            "time": "3:19",
+            "time": "3:21",
             "src": "./music/moby_lift_me_up.mp3"
           },
           "Why Does My Heart Feel So Bad?": {
             "rating": 1,
-            "time": "4:24",
+            "time": "7:15",
             "src": "./music/moby_why_does_my_heart_feel_so_bad.mp3"
           },
           "Flower": {
             "rating": 1,
-            "time": "3:26",
+            "time": "3:28",
             "src": "./music/moby_flower.mp3"
           }
         }
@@ -169,17 +169,17 @@
         "songs": {
           "Wonderful World": {
             "rating": 1,
-            "time": "2:19",
+            "time": "2:20",
             "src": "./music/louis_armstrong_wonderful_world.mp3"
           },
           "Go Down Moses": {
             "rating": 1,
-            "time": "3:40",
+            "time": "3:39",
             "src": "./music/louis_armstrong_go_down_moses.mp3"
           },
           "La Vie En Rose": {
             "rating": 1,
-            "time": "3:28",
+            "time": "3:24",
             "src": "./music/louis_armstrong_la_vie_en_rose.mp3"
           },
           "Hello Dolly!": {
@@ -195,22 +195,22 @@
         "songs": {
           "Let It Snow": {
             "rating": 1,
-            "time": "1:56",
+            "time": "2:37",
             "src": "./music/frank_sinatra_let_it_snow.mp3"
           },
           "Strangers In The Night": {
             "rating": 1,
-            "time": "2:44",
+            "time": "2:35",
             "src": "./music/frank_sinatra_strangers_in_the_night.mp3"
           },
           "My Way": {
             "rating": 1,
-            "time": "4:36",
+            "time": "4:37",
             "src": "./music/frank_sinatra_my_way.mp3"
           },
           "Jingle Bells": {
             "rating": 1,
-            "time": "2:05",
+            "time": "1:59",
             "src": "./music/frank_sinatra_jingle_bells.mp3"
           }
         }
@@ -223,23 +223,23 @@
         "songs": {
           "The Cello Song": {
             "rating": 1,
-            "time": "3:16",
+            "time": "3:17",
             "src": "./music/johann_bach_the_cello_song.mp3"
           },
           "Bach Street Prelude": {
             "rating": 1,
-            "time": "4:25",
+            "time": "4:26",
             "src": "./music/johann_bach_bach_street_prelude.mp3"
           },
           "Toccata et fugue": {
             "rating": 1,
-            "time": "8:59",
+            "time": "2:42",
             "src": "./music/johann_bach_toccata_et_fugue.mp3"
           },
-          "Suite No.3 in D major": {
+          "Suite in D major": {
             "rating": 1,
-            "time": "4:57",
-            "src": "./music/louis_armstrong_hello_dolly.mp3"
+            "time": "4:47",
+            "src": "./music/johann_bach_suite_in_d_major.mp3"
           }
         }
       },
@@ -249,23 +249,23 @@
         "songs": {
           "Moonlight Sonata": {
             "rating": 1,
-            "time": "7:27",
+            "time": "6:35",
             "src": "./music/ludwig_van_beethoven_moonlight_sonata.mp3"
           },
           "Beethoven 5 Secrets": {
             "rating": 1,
-            "time": "5:09",
+            "time": "4:55",
             "src": "./music/ludwig_van_beethoven_beethoven_5_secrets.mp3"
           },
           "Bagatelle for Piano in A Minor": {
             "rating": 1,
-            "time": "2:44",
+            "time": "3:22",
             "src": "./music/ludwig_van_beethoven_bagatelle_a_minor.mp3"
           },
-          "Piano Sonata No. 14 in C-Sharp Minor": {
+          "Ode To Joy": {
             "rating": 1,
-            "time": "6:27",
-            "src": "./music/ludwig_van_beethoven_piano_sonata_14_minor.mp3"
+            "time": "4:55",
+            "src": "./music/ludwig_van_beethoven_ode_to_joy.mp3"
           }
         }
       }
