@@ -1,36 +1,75 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>LthMVj</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <div class="wrapper">
-        <nav class="nav d-f">
-            <span class="nav__header">Welcome to LthMVj! The Best in world music platform!</span>
-           <i class="nav__icon"></i>
-           <span class="nav__name">Pavel</span>
-           <button class="nav__out">Go Out</button>
-       </nav>
-        <div class="contain d-f">
-           <h1 class="contain__header">Welcome to LthMVj</h1>
-           <div class="block-input">
+   <head>
+      <meta charset="UTF-8">
+      <title>LthMVj</title>
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/bootstrap.css">
+   </head>
+   <body>
+      <div class="wrapper">
+         <nav class="nav d-f">
+            <span class="nav__header">Welcome to LthMVj! The Best music platform in the world!</span>
+            <i class="nav__icon"></i>
+            <span class="nav__name">Pavel</span>
+            <button class="nav__out">Go Out</button>
+         </nav>
+         <div class="contain d-f">
+            <h1 class="contain__header">Welcome to LthMVj</h1>
+            <div class="block-input">
                <input class="contain__input" id="input_login" type="text" placeholder="Enter you Login">
-                <input class="contain__input" id="input_pass" type="password" placeholder="Enter you Password">
-           </div>
-        </div>
-        <section class="content">
+               <input class="contain__input" id="input_pass" type="password" placeholder="Enter you Password">
+            </div>
+         </div>
+         <section class="content">
             <div class="block-menu-player">
-                <article class="content-menu">
-                   тут у нас будет выбор жанра
-                </article>
-                <aside class="player"> проигрыватель</aside>
+               <article class="content-menu">
+                  <div id="genre_container" class="genre_container">
+                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                           <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                           <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                        </ol>
+                        <div id="for_genres" class="carousel-inner">
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                        </a>
+                     </div>
+                  </div>
+               </article>
+               <aside class="player"> проигрыватель</aside>
             </div>
             <aside class="content-playlist">плейлист</aside>
-        </section>
-    </div>
-    <script src="scripts/jquery-3.3.1.min.js"></script>
-    <script src="scripts/script.js"></script>
-</body>
+         </section>
+      </div>
+      <script id="genretpl" type="text/template">
+         {{#genres}}
+         <div class="{{class}}">
+             <img class="d-block w-100" >
+             <div class="genre">
+                 <img class="img" src="img/hardrock.jpg" alt="{{genre}}">
+                 <span class="genre_name"> {{genre}}</span>
+             </div>
+             <div class="carousel-caption d-none d-md-block">
+                 <h5>MUSIC GENRES</h5>
+                 <p class="genres_text">ROCK | RAP | ELECTRO | JAZZ | CLASSIC</p>
+               </div>
+           </div>
+         {{/genres}}
+      </script>
+      <script src="scripts/jquery-3.3.1.min.js"></script>
+      <script src="scripts/bootstrap.js"></script>
+      <script src="scripts/script.js"></script>
+      <script src="data.json"></script>
+      <script src="scripts/mustache.js"></script>
+   </body>
 </html>
