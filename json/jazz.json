@@ -1,0 +1,50 @@
+{
+  "singers": [
+    {
+      "name": "Louis Armstrong",
+      "biography": "Louis Armstrong — американский джазовый трубач. Оказал наибольшее влияние на развитие джаза и сделал многое для его популяризации во всем мире. Армстронг рано начал петь в небольшом уличном вокальном ансамбле, играл на барабанах и за несколько лет натренировал свой слух. Первое музыкальное образование он получил в исправительном лагере-интернате «Уэйф’с Хоум» для цветных подростков в 1913 г.",
+      "image": "./img/louis_armstrong.jpg",
+      "songs": [
+        {
+          "title": "Wonderful World",
+          "src": "./music/louis_armstrong_wonderful_world.mp3"
+        },
+        {
+          "title": "Go Down Moses",
+          "src": "./music/louis_armstrong_go_down_moses.mp3"
+        },
+        {
+          "title": "La Vie En Rose",
+          "src": "./music/louis_armstrong_la_vie_en_rose.mp3"
+        },
+        {
+          "title": "Hello Dolly!",
+          "src": "./music/louis_armstrong_hello_dolly.mp3"
+        }
+      ]
+    },
+    {
+      "name": "Frank Sinatra",
+      "biography": "Frank Sinatra — американский певец. В XX веке Синатра стал легендой не только музыкального мира, но и каждого аспекта американской культуры. С ранних лет его интересовала музыка, и с 13 лет он подрабатывал с помощью укулеле, маленькой музыкальной установки, и мегафона, в барах своего города.",
+      "image": "./img/frank_sinatra.jpg",
+      "songs": [
+        {
+          "title": "Let It Snow",
+          "src": "./music/frank_sinatra_let_it_snow.mp3"
+        },
+        {
+          "title": "Strangers In The Night",
+          "src": "./music/frank_sinatra_strangers_in_the_night.mp3"
+        },
+        {
+          "title": "My Way",
+          "src": "./music/frank_sinatra_my_way.mp3"
+        },
+        {
+          "title": "Jingle Bells",
+          "src": "./music/frank_sinatra_jingle_bells.mp3"
+        }
+      ]
+    }
+  ]
+}
