@@ -31,5 +31,11 @@ btnOut.addEventListener('click', ()=>{
 });
    
 
+$(function(){
+    $.getJSON('scripts/only_genres.json', function(data) {  
+        let template=$('#genretpl').html();
+        let info=Mustache.to_html(template,data);
+        $('#for_genres').html(info)
+})
 
-
+})
