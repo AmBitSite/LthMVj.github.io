@@ -29,7 +29,7 @@ body{
 .nav__header{
     margin: auto;
     font-size: 220%;
-    font-family: 'Dokdo', cursive;
+    font-family:Arial, Helvetica, sans-serif;
 }
 .nav__icon{
     display: flex;
@@ -99,7 +99,7 @@ body{
     display: flex;
     width: 100vw;
     height: 93vh;
-    background: rgba(255, 255, 255, .2);
+    background: rgba(255, 255, 255, 0.267);
 }
 .block-menu-player{
     display: flex;
@@ -115,11 +115,52 @@ body{
     display: flex;
     width: 30vw;
     height: 93vh;
-    background: rgba(255, 255, 255, .5);
+    background: rgba(255, 255, 255, 0.267);
 }
 .player{
     display: flex;
     height: 30vh;
     width: 70vw;
     background: rgba(255, 255, 255, 1);
+}
+
+    .genre_container {
+        margin: 40px 70px 40px;
+        overflow: auto;
+
+      }   
+     .genre {
+        position: relative;
+        display: inline-block;
+        margin-bottom: 10px;
+        width: calc(30%);
+         
+      }
+       
+      .genre:nth-of-type(2n) {
+        margin-right: 0;
+      }
+      .img {
+            width: 600px;
+            height: 290px;
+            
+      }
+      .genre_name {
+        display: inline-block;
+        position: absolute;
+        left: 150px;
+        top: 20%;
+        width:300px; height:100px;
+        text-align: center;
+        color:#FFF;
+        font-family:Arial, Helvetica, sans-serif;
+        font-size:50px; 
+        background-color:rgba(0,0,0,.4);
+        padding:20px 30px;
+}
+.genres_text{
+    font-size:12px;
+}
+.genre_name:hover{
+    cursor:pointer;
 }
