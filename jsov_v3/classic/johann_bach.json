@@ -1,0 +1,18 @@
+[
+  {
+    "title": "The Cello Song",
+    "src": "./music/johann_bach_the_cello_song.mp3"
+  },
+  {
+    "title": "Bach Street Prelude",
+    "src": "./music/johann_bach_bach_street_prelude.mp3"
+  },
+  {
+    "title": "Toccata et fugue",
+    "src": "./music/johann_bach_toccata_et_fugue.mp3"
+  },
+  {
+    "title": "Suite in D major",
+    "src": "./music/johann_bach_suite_in_d_major.mp3"
+  }
+]

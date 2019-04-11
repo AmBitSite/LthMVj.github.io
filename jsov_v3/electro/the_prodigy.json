@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Omen",
+    "src": "./music/the_prodigy_omen.mp3"
+  },
+  {
+    "title": "Breathe",
+    "src": "./music/the_prodigy_breathe.mp3"
+  },
+  {
+    "title": "Smack My Bitch Up",
+    "src": "./music/the_prodigy_smack_my_bitch_up.mp3"
+  },
+  {
+    "title": "Voodoo People",
+    "src": "./music/the_prodigy_voodoo_people.mp3"
+  }
+]

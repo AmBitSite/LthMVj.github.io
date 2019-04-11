@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Moonlight Sonata",
+    "src": "./music/ludwig_van_beethoven_moonlight_sonata.mp3"
+  },
+  {
+    "title": "Beethoven 5 Secrets",
+    "src": "./music/ludwig_van_beethoven_beethoven_5_secrets.mp3"
+  },
+  {
+    "title": "Bagatelle for Piano in A Minor",
+    "src": "./music/ludwig_van_beethoven_bagatelle_a_minor.mp3"
+  },
+  {
+    "title": "Ode To Joy",
+    "src": "./music/ludwig_van_beethoven_ode_to_joy.mp3"
+  }
+]

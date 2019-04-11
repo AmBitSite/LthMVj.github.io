@@ -1,0 +1,51 @@
+{
+  "singers": [
+    {
+      "name": "Johann Bach",
+      "biography": "Johann Bach — немецкий композитор. Бах — автор более 1000 музыкальных произведений во всех значимых жанрах своего времени (кроме оперы). Творческое наследие Баха интерпретируется как обобщение музыкального искусства барокко. В январе 1703 года, после окончания учёбы, он получил должность придворного музыканта у веймарского герцога Иоганна Эрнста.",
+      "image": "./img/johann_bach.jpg",
+      "songs": [
+        {
+          "title": "The Cello Song",
+          "src": "./music/johann_bach_the_cello_song.mp3"
+        },
+        {
+          "title": "Bach Street Prelude",
+          "src": "./music/johann_bach_bach_street_prelude.mp3"
+        },
+        {
+          "title": "Toccata et fugue",
+          "src": "./music/johann_bach_toccata_et_fugue.mp3"
+        },
+        {
+          "title": "Suite in D major",
+          "src": "./music/johann_bach_suite_in_d_major.mp3"
+        }
+      ]
+    },
+    {
+      "name": "Ludwig van Beethoven",
+      "biography": "Ludwig van Beethoven — немецкий композитор и пианист, последний представитель «венской классической школы». Бетховен — ключевая фигура классической музыки в период между классицизмом и романтизмом, один из наиболее исполняемых композиторов в мире. Он писал во всех существовавших в его время жанрах, включая оперу, музыку к драматическим спектаклям, хоровые сочинения. ",
+      "image": "./img/ludwig_van_beethoven.jpg",
+      "songs": [
+        {
+          "title": "Moonlight Sonata",
+          "src": "./music/ludwig_van_beethoven_moonlight_sonata.mp3"
+        },
+        {
+          "title": "Beethoven 5 Secrets",
+          "src": "./music/ludwig_van_beethoven_beethoven_5_secrets.mp3"
+        },
+        {
+          "title": "Bagatelle for Piano in A Minor",
+          "src": "./music/ludwig_van_beethoven_bagatelle_a_minor.mp3"
+        },
+        {
+          "title": "Ode To Joy",
+          "src": "./music/ludwig_van_beethoven_ode_to_joy.mp3"
+        }
+      ]
+    }
+  ]
+}
+

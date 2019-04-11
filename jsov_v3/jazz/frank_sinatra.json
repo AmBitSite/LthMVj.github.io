@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Let It Snow",
+    "src": "./music/frank_sinatra_let_it_snow.mp3"
+  },
+  {
+    "title": "Strangers In The Night",
+    "src": "./music/frank_sinatra_strangers_in_the_night.mp3"
+  },
+  {
+    "title": "My Way",
+    "src": "./music/frank_sinatra_my_way.mp3"
+  },
+  {
+    "title": "Jingle Bells",
+    "src": "./music/frank_sinatra_jingle_bells.mp3"
+  }
+]

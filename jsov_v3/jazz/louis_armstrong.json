@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Wonderful World",
+    "src": "./music/louis_armstrong_wonderful_world.mp3"
+  },
+  {
+    "title": "Go Down Moses",
+    "src": "./music/louis_armstrong_go_down_moses.mp3"
+  },
+  {
+    "title": "La Vie En Rose",
+    "src": "./music/louis_armstrong_la_vie_en_rose.mp3"
+  },
+  {
+    "title": "Hello Dolly!",
+    "src": "./music/louis_armstrong_hello_dolly.mp3"
+  }
+]

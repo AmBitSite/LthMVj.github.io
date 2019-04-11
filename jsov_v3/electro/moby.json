@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Natural Blues",
+    "src": "./music/moby_natural_blues.mp3"
+  },
+  {
+    "title": "Lift Me Up",
+    "src": "./music/moby_lift_me_up.mp3"
+  },
+  {
+    "title": "Why Does My Heart Feel So Bad?",
+    "src": "./music/moby_why_does_my_heart_feel_so_bad.mp3"
+  },
+  {
+    "title": "Flower",
+    "src": "./music/moby_flower.mp3"
+  }
+]
