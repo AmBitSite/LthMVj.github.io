@@ -61,7 +61,12 @@ $(function(){
         $('#for_genres').html(info)
     })
 })
-
+let xxx = document.querySelector('.carousel-inner');
+xxx.addEventListener('click', (e)=>{
+    let x = e.target;
+    alert(x.innerText);
+    $(".genre_container").hide("slow");
+});
 
  
 
