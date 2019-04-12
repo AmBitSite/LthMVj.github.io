@@ -11,6 +11,7 @@
     background-position: center;
     color: #fff;
     transition: 1s;
+    z-index: 1000;
 }
 #cont{
     position: absolute;
@@ -32,6 +33,7 @@
     top:-50%;
     background-color: #ffffff;
     animation: fall 1s linear infinite;
+    
 }
 .round:nth-child(1){
     animation-delay: .45s;
@@ -45,6 +47,7 @@
     animation-delay: .15s;
     background-color: #aae0e0;
 }
+
 @keyframes fall{
     0%{
         top:-50px;
@@ -71,6 +74,8 @@
     opacity: 0;
     visibility: hidden;
 }
+
+
 body{
     margin: 0;
     padding: 0;
