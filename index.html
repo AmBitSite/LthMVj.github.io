@@ -34,7 +34,24 @@
         <section class="content">
             <div class="block-menu-player">
                 <article class="content-menu">
-                   тут у нас будет выбор жанра
+                   <div id="genre_container" class="genre_container">
+                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                           <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                           <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                        </ol>
+                        <div id="for_genres" class="carousel-inner"></div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        </a>
+                     </div>
+                  </div>
                 </article>
                 <aside class="player"> проигрыватель</aside>
             </div>
@@ -78,6 +95,13 @@
             </aside>
         </section>
     </div>
+    <script id="genretpl" type="text/template">
+        {{#genres}}
+            <div class="{{class}}">
+                <div class="img"><span class="genre_name"> {{genre}}</span></div>
+            </div>
+        {{/genres}}
+    </script>
     <script src="libs/jquery-3.3.1.min.js"></script>
     <script src="libs/bootstrap.min.js"></script>
     <script src="libs/mustache.js"></script>
