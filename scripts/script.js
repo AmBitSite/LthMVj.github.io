@@ -63,32 +63,7 @@ $(function(){
 })
 
 
-
  
-$.getJSON("scripts/genres.json", function(data) {
-     //dataJSON.ganres = data.rap/*Object.getOwnPropertyNames(data.rap.Eminem.songs.Stan)*/;
-    /*dataJSON.push(data.rap);
-    dataJSON.push(data.rock);
-    dataJSON.push(data.electro);
-    dataJSON.push(data.jazz);*/
-    
-    
-    dataJSON.rap = data.rap;
-    dataJSON.rock = data.rock;
-    dataJSON.electro = data.electro;
-    dataJSON.jazz = data.jazz;
-check()
-    
-})
-
-function check(){for (let key in dataJSON.rap.Eminem.songs.Stan) {
-  x.push( key, dataJSON.rap.Eminem.songs.Stan[key]);
-  //x.push(`${key}`, `${dataJSON.rap.Eminem[key]}`);
-};}
-
-//console.log(x);
-
-
 
 
 
