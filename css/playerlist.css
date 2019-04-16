@@ -1,69 +1,57 @@
-.content-playlist{
+.playlist{
     width: 30vw;
-    height: 93vh;
+    height: 100%;
     background:rgba(7%, 4%, 38%, .5);;
     overflow: auto;
     color: #fff;
     font-family: 'Neucha', cursive;
 }
-.content-playlist-header {
+.playlist-header {
     display: flex;
+    height: 20%;
 }
-.content-playlist-song-img {
+.playlist-song-img {
     width: 80px;
-    height: 80px;
+    height: 100px;
     margin: 10px 10px 0 10px;
 }
-.content-playlist-text-main {
-    margin: 10px 0 5px 0;
+.playlist-info{
+    margin-top: 10px;
+    
 }
-.content-playlist-text-group {
-    margin: 5px 0 0 0;
-}
-.fa-star {
-    color: gold;
-}
+.playlist-container{
+    height: 80%;
+    display: flex;
+    width: 30vw;
+    overflow-x: auto;
 
-.btn{
-    background: none;
-    font-size: 20px;
-    border: none;
-    outline: none;
-}
-.btn:hover {
-    background-color:#fff;
-}
-.card-body {
-    background: none;
-    border: none;
-}
-.filter-variant {
-    cursor: pointer;
-    color:#000
-}
-.filter-variant:hover {
-    color: gold;
 }
 .song {
-    list-style: none;
-    width: 100%;
     font-size: 20px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    cursor: pointer;
+    width: 27.8vw;
+    
 }
 .playlist-songs-name {
-    margin-left: 5px;
     font-weight: bold;
 }
-.playlist-songs-dash {
-    margin-left: 5px;
-    margin-right: 5px;
-}
+
 .playlist-songs-group {
     color:#bfbfbf;
 }
-
-.playlist-songs-time {
-    float: right;
-    margin-right: 10px;
+.playlist-songs{
+    display: block;
+    list-style: none;
+    padding: 0 10px;
+    width: 28.8vw;
+    background-color: rgba(50, 70, 20, .4);
+    
 }
+.playlist-songs>li{
+    border: 1px solid rgb(50, 70, 20)
+}
+.track_active{
+color:crimson
+}
+
+

@@ -79,6 +79,7 @@
 body{
     margin: 0;
     padding: 0;
+
 }
 .d-f{
     display: flex;
@@ -99,6 +100,18 @@ body{
     width: 100vw;
     justify-content: flex-end;
     align-items: center;
+    background-color: rgba(255, 255, 255, .5);
+}
+.genres-btn{
+    margin-left: 20px;
+    width: 100px;
+}
+.btn_nav{
+    background: none;
+    border:2px solid white;
+    outline: none;
+    height: 30px;
+    border-radius: 4px;
     background-color: rgba(255, 255, 255, .5);
 }
 .nav__header{
@@ -122,13 +135,7 @@ body{
 }
 .nav__out{
     margin-right: 25px;
-    background: none;
-    border:2px solid white;
-    border-radius: 4px;
-    outline: none;
     width: 70px;
-    height: 30px;
-    background-color: rgba(255, 255, 255, .5);
 }
 .nav__out:active{
     border:2px solid rgba(255, 255, 255, .5);
