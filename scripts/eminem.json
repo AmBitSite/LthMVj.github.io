@@ -1,0 +1,96 @@
+{
+    "singers":[
+    {
+        "title": "Lose Yourself",
+        "name":"eminem",
+        "src": "music/eminem_lose_yourself.mp3"
+    },
+    {
+        "title": "Stan",
+        "name":"eminem",
+        "src": "music/eminem_stan.mp3"
+    },
+    {
+        "title": "Not Afraid",
+        "name":"eminem",
+        "src": "music/eminem_not_afraid.mp3"
+    },
+    {
+        "title": "Love The Way You Lie",
+        "name":"eminem",
+        "src": "music/eminem_love_the_way_you_lie.mp3"
+    },
+    {
+        "title": "Humanity",
+        "name":"scorpions",
+        "src": "music/scorpions_humanity.mp3"
+    },
+    {
+        "title": "Send me an ange",
+        "name":"scorpions",
+        "src": "music/scorpions_send_me_an_angel.mp3"
+    },
+    {
+        "title": "Still loving you",
+        "name":"scorpions",
+        "src": "music/scorpions_still_loving_you.mp3"
+    },
+    {
+        "title": "Wind of change",
+        "name":"scorpions",
+        "src": "music/scorpions_wind_of_change.mp3"
+    },
+    {
+        "title": "Why does my heart feel so bad",
+        "name":"moby",
+        "src": "music/moby_why_does_my_heart_feel_so_bad.mp3"
+    },
+    {
+        "title": "Natural blues",
+        "name":"moby",
+        "src": "music/moby_natural_blues.mp3"
+    },
+    {
+        "title": "Lift me up",
+        "name":"moby",
+        "src": "music/moby_lift_me_up.mp3"
+    },
+    {
+        "title": "Flower",
+        "name":"moby",
+        "src": "music/moby_flower.mp3"
+    },
+        {
+        "title": "bagatelle a minor",
+        "name":"Ludwig Van Beethoven",
+        "src": "music/moby_why_does_my_heart_feel_so_bad.mp3"
+    },
+    {
+        "title": "beethoven 5 secrets",
+        "name":"Ludwig Van Beethoven",
+        "src": "music/moby_natural_blues.mp3"
+    },
+    {
+        "title": "moonlight sonata",
+        "name":"Ludwig Van Beethoven",
+        "src": "music/moby_lift_me_up.mp3"
+    },
+    {
+        "title": "ode to joy",
+        "name":"Ludwig Van Beethoven",
+        "src": "music/moby_flower.mp3"
+    }
+    ],
+    "img":{
+        "eminem":"img/eminem.jpg",
+        "scorpions":"img/scorpions.jpg",
+        "the_prodigy":"img/the_prodigy.jpg",
+        "moby":"img/moby.jpg",
+        "50_cent":"img/50_cent.jpg",
+        "imagine_dragons":"img/imagine_dragons.jpg",
+        "johann_bach":"img/johann_bach.jpg",
+        "Ludwig Van Beethoven":"img/ludwig_van_beethoven.jpg",
+        "louis_armstrong":"louis_armstrong",
+        "frank_sinatra":"img/frank_sinatra.jpg"
+    }
+}

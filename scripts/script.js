@@ -25,8 +25,11 @@ let login = document.getElementById('input_login'),
     welcomePage = document.querySelector('.contain'),
     navBar = document.querySelector('.nav'),
     btnOut = document.querySelector('.nav__out'),
-    dataJSON=[],
-    x =[];
+    playlistHeader = document.querySelector('.playlist-info__track'),
+    playListImg,
+    arrJSON=[],
+    PlayListImgAuthor = document.querySelector('.playlist-song-img'),
+    play = document.querySelector('.play').src;
     
     $(".nav__name").text(localStorage.key(localStorage.length-1));
 
@@ -34,8 +37,6 @@ function hideLoginPage(){
     $(".contain" ).hide("slow");
     $(".nav" ).show("slow");
     $(".content").show("slow");
-    
-    
 }
 
 welcomePage.addEventListener('keydown', (e)=>{
@@ -53,24 +54,49 @@ btnOut.addEventListener('click', ()=>{
     localStorage.removeItem($(".nav__name").text());
 });
 
-
 $(function(){
     $.getJSON('scripts/only_genres.json', function(data) {  
-        let template=$('#genretpl').html();
-        let info=Mustache.to_html(template,data);
+        let template=$('#genre__tpl').html();
+        let info=Mustache.render(template,data);
         $('#for_genres').html(info)
     })
 })
-let xxx = document.querySelector('.carousel-inner');
-xxx.addEventListener('click', (e)=>{
+
+$(function(){
+    $.getJSON('scripts/eminem.json', function(data) {
+        arrJSON = data.img;
+        let template=$('#song__tpl').html();
+        let info=Mustache.render(template, data);
+        $('#for_song-container').html(info);
+        playlistHeader.innerText = document.querySelector('.playlist-songs-name').innerText;
+        let arrStrSong = playlistHeader.innerText.split('-');
+        document.querySelector('.song').classList.add("track_active");
+        playListImg = arrStrSong[arrStrSong.length-1];
+        PlayListImgAuthor.src = arrJSON[playListImg];
+    })
+})
+$('.carousel-inner').on('click', function(e){
     let x = e.target;
     alert(x.innerText);
     $(".genre_container").hide("slow");
 });
-
- 
-
-
+$('.playlist-songs').on('click', function(e){
+    let x = e.target;
+    $(".song").click(function() {
+        $(".song").removeClass("track_active");
+        $(this).addClass("track_active");
+        $(this).src = x.getAttribute('data-src');
+    });
+    playlistHeader.innerText = x.innerText;
+    let arrStrSong = playlistHeader.innerText.split('-');
+    playListImg = arrStrSong[arrStrSong.length-1];
+    PlayListImgAuthor.src = arrJSON[playListImg];
+    console.log(x.getAttribute('data-src'));
+    
+});
+$('.genres-btn').on('click', function(){
+    $(".genre_container").toggle("slow");
+})
 
 
 
