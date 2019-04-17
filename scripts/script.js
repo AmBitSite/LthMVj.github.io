@@ -27,10 +27,11 @@ let login = document.getElementById('input_login'),
     btnOut = document.querySelector('.nav__out'),
     playlistHeader = document.querySelector('.playlist-info__track'),
     playListImg,
-    arrJSON=[],
+    arrJSONimg=[],
+    arrJSONsingers = [],
     PlayListImgAuthor = document.querySelector('.playlist-song-img'),
-    play = document.querySelector('.play').src;
-    
+    currentTrack = document.getElementById('myAudio'),
+    play = document.querySelector('.player');
     $(".nav__name").text(localStorage.key(localStorage.length-1));
 
 function hideLoginPage(){
@@ -64,7 +65,8 @@ $(function(){
 
 $(function(){
     $.getJSON('scripts/eminem.json', function(data) {
-        arrJSON = data.img;
+        arrJSONimg = data.img;
+        arrJSONsingers = data.singers;
         let template=$('#song__tpl').html();
         let info=Mustache.render(template, data);
         $('#for_song-container').html(info);
@@ -72,7 +74,7 @@ $(function(){
         let arrStrSong = playlistHeader.innerText.split('-');
         document.querySelector('.song').classList.add("track_active");
         playListImg = arrStrSong[arrStrSong.length-1];
-        PlayListImgAuthor.src = arrJSON[playListImg];
+        PlayListImgAuthor.src = arrJSONimg[playListImg];
     })
 })
 $('.carousel-inner').on('click', function(e){
@@ -85,29 +87,52 @@ $('.playlist-songs').on('click', function(e){
     $(".song").click(function() {
         $(".song").removeClass("track_active");
         $(this).addClass("track_active");
-        $(this).src = x.getAttribute('data-src');
     });
-    playlistHeader.innerText = x.innerText;
-    let arrStrSong = playlistHeader.innerText.split('-');
-    playListImg = arrStrSong[arrStrSong.length-1];
-    PlayListImgAuthor.src = arrJSON[playListImg];
-    console.log(x.getAttribute('data-src'));
-    
+    function recursive(){
+        playlistHeader.innerText = x.innerText;
+        let arrStrSong = playlistHeader.innerText.split('-');
+        playListImg = arrStrSong[arrStrSong.length-1];
+        PlayListImgAuthor.src = arrJSONimg[playListImg];
+        playlist = arrJSONsingers;
+        currentTrack.src = x.getAttribute('data-value');
+        currentTrack.play();
+        $('#play').hide();
+        $('#pause').show();
+    };
+    recursive();
+    $('#forward').on('click', function(){
+        let parentSong = $(x).parent('.song').removeClass("track_active");
+        let nextTrack = $(parentSong).next().addClass("track_active");
+        x = nextTrack[0].children[0];
+        recursive(x);
+    })
+    $('#back').on('click', function(){
+        let parentSong = $(x).parent('.song').removeClass("track_active");
+        let prevTrack = $(parentSong).prev().addClass("track_active");
+        x = prevTrack[0].children[0];
+        recursive(x);
+    })
 });
+
+
+
+
+
 $('.genres-btn').on('click', function(){
     $(".genre_container").toggle("slow");
 })
 
+$('#pause').on('click', function(){
+    currentTrack.pause();
+    $('#pause').hide();
+    $('#play').show();
+})
 
-
-
-
-
-
-
-
-
-
+$('#play').on('click', function(){
+    currentTrack.play();
+    $('#pause').show();
+    $('#play').hide();
+})
 
 
 
