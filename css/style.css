@@ -104,7 +104,7 @@ body{
 }
 .genres-btn{
     margin-left: 20px;
-    width: 130px;
+    width: 100px;
 }
 .btn_nav{
     background: none;
@@ -141,6 +141,7 @@ body{
     border:2px solid rgba(255, 255, 255, .5);
     background-color: #fff;
 }
+
 .contain__header{
     display: flex;
     font-size: 50px;
