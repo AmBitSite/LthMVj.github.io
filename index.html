@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/playerlist.css">
     <link rel="stylesheet" href="css/genres.css">
+    <link rel="stylesheet" href="css/player.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
@@ -56,18 +57,41 @@
                             </script>
                         </div>
                         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         </a>
                         <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         </a>
                      </div>
                   </div>
                 </article>
-                <aside class="player"> проигрыватель
-                    <audio  autoplay="autoplay" controls="controls">
-                        <source class="play" src="music/50_cent_p_i_m_p.mp3" type="audio/mp3">
-                    </audio>
+                <aside class="player">
+                    <div id="player" class="player-container">
+                        <audio id="myAudio" src="./music/scorpions_wind_of_change.mp3">
+                        </audio>
+                            <button class="player-btn__back player-btn" id="back"></button>
+                            <button class="player-btn__play player-btn" id="play"></button>
+                            <button class="player-btn__pause player-btn" id="pause"></button>
+                            <button class="player-btn__forward player-btn" id="forward"></button>
+                        <div class="info_Player">
+                            <span class="listening_song">
+                                
+                            </span>
+                            <div class="progress">
+                                <div class="progress-bar">
+                                    <span class="progress-bar-fill"></span>
+                                </div>
+                            </div>
+                            <div class="time_And_Volume">
+                                <div class="time"> 0:00
+                                </div>
+                                <div class="volume">
+                                    <input type="range" id="start" name="volume" step="0.1" value="1" min="0" max="1">
+                                    <label for="volume">Volume</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </aside>
             </div>
             <aside class="playlist">
@@ -83,7 +107,7 @@
                          <script id="song__tpl" type="text/template">
                             {{#singers}}
                                 <li class="song">
-                                    <span class="playlist-songs-name" data-src="{{src}}">{{title}}-{{name}}</span>
+                                    <span class="playlist-songs-name" data-value="{{src}}">{{title}}-{{name}}</span>
                                 </li>
                             {{/singers}}
                         </script>
