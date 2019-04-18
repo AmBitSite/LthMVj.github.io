@@ -21,7 +21,7 @@
     border-radius:50%;
     border: none;
     margin: 20px;
-    outline: none;
+    outline: none!important;
 }
 .player-btn__back{
     background-position: -83.5% 50%;
@@ -49,7 +49,7 @@
 	display: flex;
 	outline: none;
     justify-content: space-around;
-	}
+}
 .time{
 	font-size: 35px;
 }

@@ -17,14 +17,12 @@
 }
 .playlist-info{
     margin-top: 10px;
-    
 }
 .playlist-container{
     height: 80%;
     display: flex;
     width: 30vw;
     overflow-x: auto;
-
 }
 .song {
     font-size: 20px;
@@ -35,7 +33,6 @@
 .playlist-songs-name {
     font-weight: bold;
 }
-
 .playlist-songs-group {
     color:#bfbfbf;
 }
@@ -44,8 +41,6 @@
     list-style: none;
     padding: 0 10px;
     width: 28.8vw;
-    background-color: rgba(50, 70, 20, .4);
-    
 }
 .playlist-songs>li{
     border: 1px solid rgb(50, 70, 20)
@@ -53,5 +48,3 @@
 .track_active{
 color:crimson
 }
-
-
