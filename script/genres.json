@@ -1,0 +1,275 @@
+var usersTypeOfMusic = `{
+  "genres": {
+    "rock": {
+      "Imagine Dragons": {
+        "biography": "Imagine Dragons — инди-рок-группа. Была основана в Лас-Вегасе в 2008 году. Состав группы: Дэн Рейнольдс, Бэн МакКи, Уэйн Сермон, Дэн Платцман. 1 февраля выпустили свой первый мини-альбом Imagine Dragons.",
+        "image": "./img/imagine_dragons.jpg",
+        "songs": {
+          "Believer": {
+            "rating": 1,
+            "time": "3:24",
+            "src": "./music/imagine_dragons_believer.mp"
+          },
+          "Natural": {
+            "rating": 1,
+            "time": "3:08",
+            "src": "./music/imagine_dragons_natural.mp3"
+          },
+          "Thunder": {
+            "rating": 1,
+            "time": "3:07",
+            "src": "./music/imagine_dragons_thunder.mp3"
+          },
+          "Radioactive": {
+            "rating": 1,
+            "time": "3:07",
+            "src": "./music/imagine_dragons_radioactive.mp3"
+          }
+        }
+      },
+      "Scorpions": {
+        "biography": "Scorpions — немецкая англоязычная рок-группа. Была основана в 1965 в Ганновере. Состав группы: Клаус Майне, Рудольф Шенкер, Маттиас Ябс, Микки Ди, Павел Мончивода. На международной сцене группа появилась в 1972 году, когда выпустила свой первый альбом под названием Lonesome Crow.",
+        "image": "./img/scorpions.jpg",
+        "songs": {
+          "Wind Of Change": {
+            "rating": 1,
+            "time": "5:12",
+            "src": "./music/scorpions_wind_of_change.mp3"
+          },
+          "Still Loving You": {
+            "rating": 1,
+            "time": "6:28",
+            "src": "./music/scorpions_still_loving_you.mp3"
+          },
+          "Send Me An Angel": {
+            "rating": 1,
+            "time": "4:33",
+            "src": "./music/scorpions_send_me_an_angel.mp3"
+          },
+          "Humanity": {
+            "rating": 1,
+            "time": "5:26",
+            "src": "./music/scorpions_humanity.mp3"
+          }
+        }
+      }
+    },
+    "rap": {
+      "Eminem": {
+        "biography": "Eminem — американский рэпер. В 1992 году Эминем вместе со своими друзьями детства сформировал группу Soul Intent. Выпустил дебютный альбом Infinite в 1996 году. Eminem достиг огромной популярности в 1999-м с релизом дебютного альбома The Slim Shady LP на мейджор-лейбле.",
+        "image": "./img/eminem.jpg",
+        "songs": {
+          "Lose Yourself": {
+            "rating": 1,
+            "time": "5:26",
+            "src": "./music/eminem_lose_yourself.mp3"
+          },
+          "Stan": {
+            "rating": 1,
+            "time": "6:43",
+            "src": "./music/eminem_stan.mp3"
+          },
+          "Not Afraid": {
+            "rating": 1,
+            "time": "4:08",
+            "src": "./music/eminem_not_afraid.mp3"
+          },
+          "Love The Way You Lie": {
+            "rating": 1,
+            "time": "4:23",
+            "src": "./music/eminem_love_the_way_you_lie.mp3"
+          }
+        }
+      },
+      "50 Cent": {
+        "biography": "50 Cent — американский рэпер. 50 Cent начал читать рэп в подвале у друга. В 1996 году друг знакомит его с Jam Master Jay из Run DMC, который организовал свой собственный лейбл Jam Master Jay Records. Популярность 50 Cent’а начала расти после успешного сингла «How to Rob», который он написал за полчаса, пока ехал в машине на студию.",
+        "image": "./img/50_cent.jpg",
+        "songs": {
+          "Candy Shop": {
+            "rating": 1,
+            "time": "3:28",
+            "src": "./music/50_cent_candy_shop.mp3"
+          },
+          "In Da Club": {
+            "rating": 1,
+            "time": "3:13",
+            "src": "./music/50_cent_in_da_club.mp3"
+          },
+          "P.I.M.P.": {
+            "rating": 1,
+            "time": "4:10",
+            "src": "./music/50_cent_p_i_m_p.mp3"
+          },
+          "Ayo Technology": {
+            "rating": 1,
+            "time": "4:07",
+            "src": "./music/50_cent_ayo_technology.mp3"
+          }
+        }
+      }
+    },
+    "electro": {
+      "The Prodigy": {
+        "biography": "The Prodigy — британский музыкальный коллектив. Группа образована в 1990 году. Состав группы: Лиам Хоулетт, Максим Реалити. В феврале 1991 года выходит первый релиз The Prodigy, мини-альбом What Evil Lurks, состоявший преимущественно из ранних работ Лиама Хоулетта.",
+        "image": "./img/the_prodigy.jpg",
+        "songs": {
+          "Omen": {
+            "rating": 1,
+            "time": "3:36",
+            "src": "./music/the_prodigy_omen.mp3"
+          },
+          "Breathe": {
+            "rating": 1,
+            "time": "5:34",
+            "src": "./music/the_prodigy_breathe.mp3"
+          },
+          "Smack My Bitch Up": {
+            "rating": 1,
+            "time": "5:43",
+            "src": "./music/the_prodigy_smack_my_bitch_up.mp3"
+          },
+          "Voodoo People": {
+            "rating": 1,
+            "time": "6:27",
+            "src": "./music/the_prodigy_voodoo_people.mp3"
+          }
+        }
+      },
+      "Moby": {
+        "biography": "Moby — американский диджей, певец, композитор, мультиинструменталист и исполнитель. Родился в Нью-Йорке, но вырос в Дэриене, Коннектикут. Первый альбом — в стиле техно — выпустил в 1992 году (Moby).",
+        "image": "./img/moby.jpg",
+        "songs": {
+          "Natural Blues": {
+            "rating": 1,
+            "time": "3:02",
+            "src": "./music/moby_natural_blues.mp3"
+          },
+          "Lift Me Up": {
+            "rating": 1,
+            "time": "3:19",
+            "src": "./music/moby_lift_me_up.mp3"
+          },
+          "Why Does My Heart Feel So Bad?": {
+            "rating": 1,
+            "time": "4:24",
+            "src": "./music/moby_why_does_my_heart_feel_so_bad.mp3"
+          },
+          "Flower": {
+            "rating": 1,
+            "time": "3:26",
+            "src": "./music/moby_flower.mp3"
+          }
+        }
+      }
+    },
+    "jazz": {
+      "Louis Armstrong": {
+        "biography": "Louis Armstrong — американский джазовый трубач. Оказал наибольшее влияние на развитие джаза и сделал многое для его популяризации во всем мире. Армстронг рано начал петь в небольшом уличном вокальном ансамбле, играл на барабанах и за несколько лет натренировал свой слух. Первое музыкальное образование он получил в исправительном лагере-интернате «Уэйф’с Хоум» для цветных подростков в 1913 г.",
+        "image": "./img/louis_armstrong.jpg",
+        "songs": {
+          "Wonderful World": {
+            "rating": 1,
+            "time": "2:19",
+            "src": "./music/louis_armstrong_wonderful_world.mp3"
+          },
+          "Go Down Moses": {
+            "rating": 1,
+            "time": "3:40",
+            "src": "./music/louis_armstrong_go_down_moses.mp3"
+          },
+          "La Vie En Rose": {
+            "rating": 1,
+            "time": "3:28",
+            "src": "./music/louis_armstrong_la_vie_en_rose.mp3"
+          },
+          "Hello Dolly!": {
+            "rating": 1,
+            "time": "2:24",
+            "src": "./music/louis_armstrong_hello_dolly.mp3"
+          }
+        }
+      },
+      "Frank Sinatra": {
+        "biography": "Frank Sinatra — американский певец. В XX веке Синатра стал легендой не только музыкального мира, но и каждого аспекта американской культуры. С ранних лет его интересовала музыка, и с 13 лет он подрабатывал с помощью укулеле, маленькой музыкальной установки, и мегафона, в барах своего города.",
+        "image": "./img/frank_sinatra.jpg",
+        "songs": {
+          "Let It Snow": {
+            "rating": 1,
+            "time": "1:56",
+            "src": "./music/frank_sinatra_let_it_snow.mp3"
+          },
+          "Strangers In The Night": {
+            "rating": 1,
+            "time": "2:44",
+            "src": "./music/frank_sinatra_strangers_in_the_night.mp3"
+          },
+          "My Way": {
+            "rating": 1,
+            "time": "4:36",
+            "src": "./music/frank_sinatra_my_way.mp3"
+          },
+          "Jingle Bells": {
+            "rating": 1,
+            "time": "2:05",
+            "src": "./music/frank_sinatra_jingle_bells.mp3"
+          }
+        }
+      }
+    },
+    "classic": {
+      "Johann Bach": {
+        "biography": "Johann Bach — немецкий композитор. Бах — автор более 1000 музыкальных произведений во всех значимых жанрах своего времени (кроме оперы). Творческое наследие Баха интерпретируется как обобщение музыкального искусства барокко. В январе 1703 года, после окончания учёбы, он получил должность придворного музыканта у веймарского герцога Иоганна Эрнста.",
+        "image": "./img/johann_bach.jpg",
+        "songs": {
+          "The Cello Song": {
+            "rating": 1,
+            "time": "3:16",
+            "src": "./music/johann_bach_the_cello_song.mp3"
+          },
+          "Bach Street Prelude": {
+            "rating": 1,
+            "time": "4:25",
+            "src": "./music/johann_bach_bach_street_prelude.mp3"
+          },
+          "Toccata et fugue": {
+            "rating": 1,
+            "time": "8:59",
+            "src": "./music/johann_bach_toccata_et_fugue.mp3"
+          },
+          "Suite No.3 in D major": {
+            "rating": 1,
+            "time": "4:57",
+            "src": "./music/louis_armstrong_hello_dolly.mp3"
+          }
+        }
+      },
+      "Ludwig van Beethoven": {
+        "biography": "Ludwig van Beethoven — немецкий композитор и пианист, последний представитель «венской классической школы». Бетховен — ключевая фигура классической музыки в период между классицизмом и романтизмом, один из наиболее исполняемых композиторов в мире. Он писал во всех существовавших в его время жанрах, включая оперу, музыку к драматическим спектаклям, хоровые сочинения. ",
+        "image": "./img/ludwig_van_beethoven.jpg",
+        "songs": {
+          "Moonlight Sonata": {
+            "rating": 1,
+            "time": "7:27",
+            "src": "./music/ludwig_van_beethoven_moonlight_sonata.mp3"
+          },
+          "Beethoven 5 Secrets": {
+            "rating": 1,
+            "time": "5:09",
+            "src": "./music/ludwig_van_beethoven_beethoven_5_secrets.mp3"
+          },
+          "Bagatelle for Piano in A Minor": {
+            "rating": 1,
+            "time": "2:44",
+            "src": "./music/ludwig_van_beethoven_bagatelle_a_minor.mp3"
+          },
+          "Piano Sonata No. 14 in C-Sharp Minor": {
+            "rating": 1,
+            "time": "6:27",
+            "src": "./music/ludwig_van_beethoven_piano_sonata_14_minor.mp3"
+          }
+        }
+      }
+    }
+  }
+}`;
+

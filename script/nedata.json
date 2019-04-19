@@ -1,0 +1,4 @@
+var usersTypeOfMusic = `{
+         "typeOfMusic":["Rock", "Jazz", "Classic", "Techno", "Rave","House","Modern",
+                       "Rock", "Jazz", "Classic", "Techno", "Rave","House","Modern"]
+   }`;

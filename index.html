@@ -1,136 +1,54 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <title>LthMVj</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/playerlist.css">
-    <link rel="stylesheet" href="css/genres.css">
-    <link rel="stylesheet" href="css/player.css">
-    <link rel="stylesheet" href="css/bio.css">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <meta charset="utf-8" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.1.0/mustache.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>musicapp</title>
 </head>
+
 <body>
-   <div id="preloader">
-       <div id="cont">
-           <div class="round"></div>
-           <div class="round"></div>
-           <div class="round"></div>
-           <div class="round"></div>
-       </div>
-       <div id="loading">Loading</div>
+    <div id='songs'>
+        <script id="templates" type="x-tmpl-mustache">
+            <ul>
+   {{#rock}}
+   <li> {{.}}</li>
+   {{/rock}}
+   </ul>
+</script>
     </div>
-    <div class="wrapper">
-        <nav class="nav d-f">
-            <button class="genres-btn btn_nav">Musical Genre</button>
-            <span class="nav__header">Welcome to LthMVj! The Best in world music platform!</span>
-            <i class="nav__icon"></i>
-            <span class="nav__name"></span>
-            <button class="nav__out btn_nav">Go Out</button>
-        </nav>
-        <div class="contain d-f">
-            <h1 class="contain__header">Welcome to LthMVj</h1>
-            <div class="block-input">
-                <input class="contain__input" id="input_login" type="text" placeholder="Enter you Login">
+    <div id="player">
+        <audio id="myAudio">
+            <source src="music/Scorpions-Wing_of_change.mp3" type="audio/mpeg" id="currentTrack">
+        </audio>
+        <div class="buttons">
+            <button id="back" type="button"></button>
+            <button id="play" type="button"></button>
+            <button id="pause" type="button"></button>
+            <button id="forward" type="button"></button>
+        </div>
+        <div class='info_Player'>
+            <div class='listening_song'>
+            </div>
+            <div class='progress'>
+                <div class="progress-bar">
+                    <span class="progress-bar-fill"></span>
+                </div>
+            </div>
+                <div class='time_And_Volume'>
+                    <div class='time'> 0:00
+                    </div>
+                    <div class='volume'><input type="range" id="start" name="volume" step="0.1" value="1" min="0" max="1">
+                        <label for="volume">Volume</label>
+                    </div>
+                </div>
             </div>
         </div>
-        <section class="content">
-            <div class="block-menu-player">
-                <article class="content-menu">
-                  <div class="bio_container">
-                        <div class="pic">
-                            <img class="biography-img" src="" alt="song-name">
-                        </div>
-                        <button class="close-bio">Крестик</button>
-                        <span class="biography-text">
-                        </span>
-                        
-                    </div>
-                   <div id="genre_container" class="genre_container">
-                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                           <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                           <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-                        </ol>
-                        <div id="for_genres" class="carousel-inner">
-                            <script id="genre__tpl" type="text/template">
-                                {{#genres}}
-                                    <div class="{{class}}">
-                                        <div class="img">
-                                            <span class="genre_name"> {{genre}}</span>
-                                        </div>
-                                    </div>
-                                {{/genres}}
-                            </script>
-                        </div>
-                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        </a>
-                     </div>
-                  </div>
-                </article>
-                <aside class="player">
-                    <div id="player" class="player-container">
-                        <audio id="myAudio" src="./music/scorpions_wind_of_change.mp3">
-                        </audio>
-                            <button class="player-btn__back player-btn" id="back"></button>
-                            <button class="player-btn__play player-btn" id="play"></button>
-                            <button class="player-btn__pause player-btn" id="pause"></button>
-                            <button class="player-btn__forward player-btn" id="forward"></button>
-                        <div class="info_Player">
-                            <span class="listening_song">
-                                
-                            </span>
-                            <div class="progress">
-                                <div class="progress-bar">
-                                    <span class="progress-bar-fill"></span>
-                                </div>
-                            </div>
-                            <div class="time_And_Volume">
-                                <div class="time"> 0:00
-                                </div>
-                                <div class="volume">
-                                    <input type="range" id="start" name="volume" step="0.1" value="1" min="0" max="1">
-                                    <label for="volume">Volume</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </aside>
-            </div>
-            <aside class="playlist">
-                <div class="playlist-header">
-                    <img class="playlist-song-img" src="" alt="song-name">
-                    <div class="playlist-info">
-                        <h3 class="playlist-info__track"></h3>
-                        <div class="playlist-info__author">рейтинг</div>
-                    </div>
-                </div>
-                <div class="playlist-container">
-                    <ul class="playlist-songs" id="for_song-container">
-                         <script id="song__tpl" type="text/template">
-                            {{#singers}}
-                                <li class="song">
-                                    <span class="playlist-songs-name" data-value="{{src}}">{{title}}-{{name}}</span>
-                                </li>
-                            {{/singers}}
-                        </script>
-                    </ul>
-                </div>
-            </aside>
-        </section>
-    </div>
-    <script src="libs/jquery-3.3.1.min.js"></script>
-    <script src="libs/popper.min.js"></script>
-    <script src="libs/bootstrap.min.js"></script>
-    <script src="libs/mustache.js"></script>
-    <script src="libs/howler.min.js"></script>
-    <script src="scripts/script.js"></script>
+        <script type="text/javascript" src="script/rock.json"></script>
+        <script type="text/javascript" src="script/classic.json"></script>
+        <script src='script/script.js'></script>
 </body>
+
 </html>
