@@ -113,7 +113,7 @@ $('.playlist-songs').on('click', function(e){
         $(currentTrack).on('ended',function(){
             let parentSong = $(track).parent('.song').removeClass("track_active");
             let nextTrack = $(parentSong[0]).next().addClass("track_active");
-            track = prevTrack[0].children[0];
+            track = nextTrack[0].children[0];
             recursive(track);
         });
     };
