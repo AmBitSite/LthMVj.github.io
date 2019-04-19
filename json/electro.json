@@ -1,0 +1,61 @@
+{
+  "singers":[
+  {
+      "title": "Why does my heart feel so bad",
+      "name":"Moby",
+      "src": "music/moby_why_does_my_heart_feel_so_bad.mp3",
+      "genre":"electro"
+  },
+  {
+      "title": "Natural blues",
+      "name":"Moby",
+      "src": "music/moby_natural_blues.mp3",
+      "genre":"electro"
+  },
+  {
+      "title": "Lift me up",
+      "name":"Moby",
+      "src": "music/moby_lift_me_up.mp3",
+      "genre":"electro"
+  },
+  {
+      "title": "Flower",
+      "name":"Moby",
+      "src": "music/moby_flower.mp3",
+      "genre":"electro"
+  },
+  {
+      "title": "Breathe",
+      "name":"The prodigy",
+      "src": "music/the_prodigy_breathe.mp3",
+      "genre":"electro"
+  },
+  {
+      "title": "Omen",
+      "name":"The prodigy",
+      "src": "music/the_prodigy_omen.mp3",
+      "genre":"electro"
+  },
+  {
+      "title": "Smack my bitch up",
+      "name":"The prodigy",
+      "src": "music/the_prodigy_smack_my_bitch_up.mp3",
+      "genre":"electro"
+  },
+  {
+      "title": "Voodoo people",
+      "name":"The prodigy",
+      "src": "music/the_prodigy_voodoo_people.mp3",
+      "genre":"electro"
+  }
+  ],
+  "img":{
+      "The prodigy":"img/the_prodigy.jpg",
+      "Moby":"img/moby.jpg"
+      
+  },
+  "bio":{
+      "the_prodigy":"The Prodigy — британский музыкальный коллектив. Группа образована в 1990 году. Состав группы: Лиам Хоулетт, Максим Реалити. В феврале 1991 года выходит первый релиз The Prodigy, мини-альбом What Evil Lurks, состоявший преимущественно из ранних работ Лиама Хоулетта.",
+      "moby":"Moby — американский диджей, певец, композитор, мультиинструменталист и исполнитель. Родился в Нью-Йорке, но вырос в Дэриене, Коннектикут. Первый альбом — в стиле техно — выпустил в 1992 году (Moby)."
+    }
+}
