@@ -1,9 +1,0 @@
-var rock = `{
-"rock":
-  [  "Scorpions--Wind Of Change","Scorpions--Still Loving You",
-    "Scorpions--Send Me An Angel","Scorpions--Humanity","Imagine Dragons--Believer",
-    "Imagine Dragons--Natural","Imagine Dragons--Thunder","Imagine Dragons--Radioactive"
-  ]
-  }`;
-  
-  
