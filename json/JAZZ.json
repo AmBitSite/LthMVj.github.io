@@ -22,19 +22,28 @@
           "src": "./music/louis_armstrong_hello_dolly.mp3"
     },
     {
-      "name": "Frank Sinatra",
-      "title": "Let It Snow",
-          "src": "./music/frank_sinatra_let_it_snow.mp3"
+        "title": "Jingle bells",
+        "name":"Frank Sinatra",
+        "src": "music/frank_sinatra_jingle_bells.mp3",
+        "genre":"jazz"
     },
     {
-      "name": "Frank Sinatra",
-      "title": "Let It Snow",
-          "src": "./music/frank_sinatra_let_it_snow.mp3"
+        "title": "Let it snow",
+        "name":"Frank Sinatra",
+        "src": "music/frank_sinatra_let_it_snow.mp3",
+        "genre":"jazz"
     },
     {
-      "name": "Frank Sinatra",
-      "title": "Let It Snow",
-          "src": "./music/frank_sinatra_let_it_snow.mp3"
+        "title": "My way",
+        "name":"Frank Sinatra",
+        "src": "music/frank_sinatra_my_way.mp3",
+        "genre":"jazz"
+    },
+    {
+        "title": "Strangers in the night",
+        "name":"Frank Sinatra",
+        "src": "music/frank_sinatra_strangers_in_the_night.mp3",
+        "genre":"jazz"
     }
   ],
   "img":{
