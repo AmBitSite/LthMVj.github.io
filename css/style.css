@@ -1,9 +1,87 @@
 @import url('https://fonts.googleapis.com/css?family=Caveat:700|Dokdo');
 
+#preloader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: url(../img/preloader-bg.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    transition: 1s;
+    z-index: 1000;
+}
+#cont{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100px;
+    height: 20px;
+    margin: auto;
+}
+.round{
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    margin: 0 .5px;
+    border-radius: 50%;
+    position: relative;
+    top:-50%;
+    background-color: #ffffff;
+    animation: fall 1s linear infinite;
+    
+}
+.round:nth-child(1){
+    animation-delay: .45s;
+    background-color: darkcyan;
+}
+.round:nth-child(2){
+    animation-delay: .3s;
+    background-color: #3eaaaa;
+}
+.round:nth-child(3){
+    animation-delay: .15s;
+    background-color: #aae0e0;
+}
+
+@keyframes fall{
+    0%{
+        top:-50px;
+    }
+    50%{
+        top:0;
+    }
+    100%{
+        top:-50px;
+    }
+}
+#loading{
+    position: absolute;
+    text-align: center;
+    top:70%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    font-size: 2em;
+    font-weight: bold;
+}
+#preloader.hide{
+    opacity: 0;
+    visibility: hidden;
+}
+
 
 body{
     margin: 0;
     padding: 0;
+    outline: none;
+    overflow-x: none;
+    overflow-y: none;
 }
 .d-f{
     display: flex;
@@ -26,10 +104,22 @@ body{
     align-items: center;
     background-color: rgba(255, 255, 255, .5);
 }
+.genres-btn{
+    margin-left: 20px;
+    width: 130px;
+}
+.btn_nav{
+    background: none;
+    border:2px solid white;
+    outline: none;
+    height: 30px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, .5);
+}
 .nav__header{
     margin: auto;
     font-size: 220%;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: 'Dokdo', cursive;
 }
 .nav__icon{
     display: flex;
@@ -37,21 +127,17 @@ body{
     width: 40px;
     height: 40px;
     margin-right: 25px;
-    background-size: contain
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 .nav__name{
     display: flex;
     margin-right: 25px;
+    cursor: default;
 }
 .nav__out{
     margin-right: 25px;
-    background: none;
-    border:2px solid white;
-    border-radius: 4px;
-    outline: none;
     width: 70px;
-    height: 30px;
-    background-color: rgba(255, 255, 255, .5);
 }
 .nav__out:active{
     border:2px solid rgba(255, 255, 255, .5);
@@ -99,7 +185,7 @@ body{
     display: flex;
     width: 100vw;
     height: 93vh;
-    background: rgba(255, 255, 255, 0.267);
+    background: rgba(255, 255, 255, .2);
 }
 .block-menu-player{
     display: flex;
@@ -111,56 +197,9 @@ body{
     height: 63vh;
     background: rgba(255, 255, 255, .2);
 }
-.content-playlist{
-    display: flex;
-    width: 30vw;
-    height: 93vh;
-    background: rgba(255, 255, 255, 0.267);
-}
 .player{
     display: flex;
     height: 30vh;
     width: 70vw;
     background: rgba(255, 255, 255, 1);
-}
-
-    .genre_container {
-        margin: 40px 70px 40px;
-        overflow: auto;
-
-      }   
-     .genre {
-        position: relative;
-        display: inline-block;
-        margin-bottom: 10px;
-        width: calc(30%);
-         
-      }
-       
-      .genre:nth-of-type(2n) {
-        margin-right: 0;
-      }
-      .img {
-            width: 600px;
-            height: 290px;
-            
-      }
-      .genre_name {
-        display: inline-block;
-        position: absolute;
-        left: 150px;
-        top: 20%;
-        width:300px; height:100px;
-        text-align: center;
-        color:#FFF;
-        font-family:Arial, Helvetica, sans-serif;
-        font-size:50px; 
-        background-color:rgba(0,0,0,.4);
-        padding:20px 30px;
-}
-.genres_text{
-    font-size:12px;
-}
-.genre_name:hover{
-    cursor:pointer;
 }
