@@ -80,8 +80,6 @@ body{
     margin: 0;
     padding: 0;
     outline: none;
-    overflow-x: none;
-    overflow-y: none;
 }
 .d-f{
     display: flex;
@@ -106,7 +104,7 @@ body{
 }
 .genres-btn{
     margin-left: 20px;
-    width: 130px;
+    width: 140px;
 }
 .btn_nav{
     background: none;
