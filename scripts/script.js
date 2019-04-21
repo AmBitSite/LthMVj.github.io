@@ -157,6 +157,7 @@ $('#play').on('click', function(){
     currentTrack.play();
     $('#pause').show();
     $('#play').hide();
+    document.getElementById('forward').removeAttribute('disabled');
 });
 $('.playlist-header').on('click', function (e) {
     let x = e.target;
