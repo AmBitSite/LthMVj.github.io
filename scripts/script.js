@@ -58,6 +58,15 @@ $(function(){
         $('#for_genres').html(info);
     });
 })
+function firstTrackToList(){
+    playlistHeader.innerText = document.querySelector('.playlist-songs-name').innerText;
+        let arrStrSong = playlistHeader.innerText.split('-');
+        document.querySelector('.song').classList.add("track_active");
+        playListImg = arrStrSong[arrStrSong.length-1];
+        PlayListImgAuthor.src = arrJSONimg[playListImg];
+        currentTrack.src = document.querySelector(".track_active").children[0].dataset.value;
+        document.getElementById('back').setAttribute('disabled', 'disabled')
+}
 $(function(){
     $.getJSON('json/data.json', function(data) {
         arrJSONimg = data.img;
@@ -66,11 +75,7 @@ $(function(){
         let template=$('#song__tpl').html();
         let info=Mustache.render(template, data);
         $('#for_song-container').html(info);
-        playlistHeader.innerText = document.querySelector('.playlist-songs-name').innerText;
-        let arrStrSong = playlistHeader.innerText.split('-');
-        document.querySelector('.song').classList.add("track_active");
-        playListImg = arrStrSong[arrStrSong.length-1];
-        PlayListImgAuthor.src = arrJSONimg[playListImg];
+        firstTrackToList();
     });
 });
 $('.carousel-inner').on('click', function(e){
@@ -82,18 +87,26 @@ $('.carousel-inner').on('click', function(e){
             let template = $('#song__tpl').html();
             let info = Mustache.render(template, data);
             $('#for_song-container').html(info);
+            firstTrackToList()
         });
+        
     });
+    currentTrack.load();
+    $('#pause').hide();
+    $('#play').show();
 });
 function nextTrack(){
     let currentTrackParent = document.querySelector('.track_active');
     let parentSong = currentTrackParent.nextElementSibling;
-    currentTrackParent.classList.remove('track_active');
-    parentSong.classList.add('track_active');
-    track = parentSong.children[0];
-    recursive(track);
+    if(parentSong!==null){
+        currentTrackParent.classList.remove('track_active');
+        parentSong.classList.add('track_active');
+        track = parentSong.children[0];
+        recursive(track);
+        }
+    else{document.getElementById('forward').setAttribute('disabled', 'disabled')}
+    
 }
-$(currentTrack).on('ended',function(){nextTrack()});
 function recursive(track){
     playlistHeader.innerText = track.innerText;
     let arrStrSong = playlistHeader.innerText.split('-');
@@ -104,24 +117,36 @@ function recursive(track){
     $('#play').hide();
     $('#pause').show();
 };
+function removeblockBtn(){
+    document.getElementById('back').removeAttribute('disabled');
+    document.getElementById('forward').removeAttribute('disabled');
+}
+$(currentTrack).on('ended',function(){
+        nextTrack();
+        $('#pause').hide();
+        $('#play').show();
+});
 $('.playlist-songs').on('click', function(e){
     let track = e.target;
     if(track.children.length==0){
         $('.song').removeClass("track_active");
         $(track).parent('.song').addClass("track_active");
+        removeblockBtn();
         recursive(track);
     };
 });
 $('#forward').on('click', function(){
-    nextTrack();
-});
-$('#back').on('mouseup', function(){
+    document.getElementById('back').removeAttribute('disabled', 'disabled');
+    nextTrack()});
+$('#back').on('click', function(){
     let currentTrackParent = document.querySelector('.track_active');
     let prevParent = currentTrackParent.previousElementSibling;
-    currentTrackParent.classList.remove('track_active');
-    prevParent.classList.add('track_active');
-    track = prevParent.children[0];
-    recursive(track);
+    let prevPrevParent = prevParent.previousElementSibling;
+        currentTrackParent.classList.remove('track_active');
+        prevParent.classList.add('track_active');
+        track = prevParent.children[0];
+        recursive(track);
+    if(prevPrevParent== null){document.getElementById('back').setAttribute('disabled', 'disabled')}
 });
 $('#pause').on('click', function(){
     currentTrack.pause();
@@ -129,7 +154,7 @@ $('#pause').on('click', function(){
     $('#play').show();
 });
 $('#play').on('click', function(){
-    currentTrack.load();
+    currentTrack.play();
     $('#pause').show();
     $('#play').hide();
 });
