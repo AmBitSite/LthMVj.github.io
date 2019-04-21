@@ -131,7 +131,14 @@ $('.playlist-songs').on('click', function(e){
     if(track.children.length==0){
         $('.song').removeClass("track_active");
         $(track).parent('.song').addClass("track_active");
-        removeblockBtn();
+        let currentTrackParent = document.querySelector('.track_active');
+        if(currentTrackParent.previousElementSibling==null){
+            document.getElementById('back').setAttribute('disabled', 'disabled');
+        }
+        else if(currentTrackParent.previousElementSibling!==null){
+            document.getElementById('back').removeAttribute('disabled');
+        }
+        document.getElementById('forward').removeAttribute('disabled');
         recursive(track);
     };
 });
