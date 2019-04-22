@@ -6,7 +6,7 @@
     left: 0;
     bottom: 0;
     right: 0;
-    background: url(../img/preloader-bg.png) no-repeat;
+    background: url(../img/preloader-bg.webp) no-repeat;
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -74,12 +74,12 @@
     opacity: 0;
     visibility: hidden;
 }
-
-
 body{
     margin: 0;
     padding: 0;
     outline: none;
+    overflow-x: hidden;
+    overflow-y:hidden;
 }
 .d-f{
     display: flex;
@@ -92,7 +92,7 @@ body{
     flex-direction: column;
     width: 100vw;
     height: 100vh;
-    background: url(../img/bg.png) no-repeat;
+    background: url(../img/bg.webp) no-repeat;
     background-size: cover;
 }
 .nav{

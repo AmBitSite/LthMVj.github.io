@@ -9,6 +9,7 @@
 .playlist-header {
     display: flex;
     height: 20%;
+    cursor: pointer;
 }
 .playlist-song-img {
     width: 80px;
