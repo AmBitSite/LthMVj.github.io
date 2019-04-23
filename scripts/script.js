@@ -1,10 +1,12 @@
 window.onload = ()=>{
-    (localStorage.length !==0)?hideLoginPage():($( ".nav" ).hide(), $(".content").hide(), $(".content-menu").hide());
+   $('.nav').hide();
+    $('.content').hide(); 
 };
 function hideLoginPage(){
     $(".contain" ).hide("slow");
     $(".nav" ).show("slow");
     $(".content").show("slow");
+    $('.content-menu').show('slow');
 }
 $(function(){
     let step = '',
@@ -22,7 +24,6 @@ $(function(){
     });
 });
 let login = document.getElementById('input_login'),
-    welcomePage = document.querySelector('.contain'),
     navBar = document.querySelector('.nav'),
     btnOut = document.querySelector('.nav__out'),
     playlistHeader = document.querySelector('.playlist-info__track'),
@@ -37,18 +38,28 @@ let login = document.getElementById('input_login'),
 
 $(".nav__name").text(localStorage.key(localStorage.length-1));
 
-welcomePage.addEventListener('keydown', (e)=>{
-   if(e.keyCode == 13){
-        localStorage.setItem(`${login.value}`, "1");
-        $(".nav__name").text(`${login.value}`);
-        hideLoginPage();
+$('.contain').on('keydown', (e)=>{
+    let arrlogin = login.value.split('');
+    if(e.keyCode == 13){
+        if((arrlogin.length>=2)&&(arrlogin.length<=10)){
+            $(".nav__name").text(login.value);
+            hideLoginPage();
+            let user = login.value;
+            if(typeof localStorage[user] !== "undefined"){
+                setTimeout(function(){
+                    alert('Hello again ' + `${user}`);
+                }, 1000);
+            }
+            else{localStorage.setItem(login.value, "1");}
+        }
+        else alert('Имя должно содержать не менее двух и не более десяти символов, Asshole...');
     };
 });
 btnOut.addEventListener('click', ()=>{
     $(".nav" ).hide( "slow");
     $(".contain" ).show( "slow");
     $(".content").hide("slow");
-    localStorage.removeItem($(".nav__name").text());
+    login.value = '';
 });
 $(function(){
     $.getJSON('json/only_genres.json', function(data) {  
@@ -77,21 +88,25 @@ $(function(){
         firstTrackToList();
     });
 });
+let genre='ALL';
 $('.carousel-inner').on('click', function(e){
-    let x = e.target;
-    $(function(){
-        $.getJSON('json/'+x.innerText+'.json', function(data) {  
-            let template = $('#song__tpl').html();
-            let info = Mustache.render(template, data);
-            $('#for_song-container').html(info);
-            removeblockBtn();
-            firstTrackToList()
-        });
-    });
+    genre = e.target.innerText;
+    getGenre (compareNameFromAZ);
     currentTrack.load();
     $('#pause').hide();
     $('#play').show();
 });
+function getGenre(typeOfSort){
+        $.getJSON('json/'+genre+'.json', function(data) { 
+        data.singers.sort(typeOfSort); 
+            let template = $('#song__tpl').html();
+            let info = Mustache.render(template, data);
+            $('#for_song-container').html(info);
+            removeblockBtn();
+            firstTrackToList();
+        });
+    };
+
 function nextTrack(){
     let currentTrackParent = document.querySelector('.track_active');
     let parentSong = currentTrackParent.nextElementSibling;
@@ -166,7 +181,7 @@ $('#play').on('click', function(){
 $('.playlist-header').on('click', function (e) {
     let x = e.target;
     if(x = document.querySelector('.playlist-song-img')){
-        (GenresImgAuthor.src===x.src )?$(".genre_container").fadeToggle():$(".genre_container").fadeOut();
+        (GenresImgAuthor.src===x.src )?$(".bio_container").fadeToggle():$(".genre_container").fadeOut();
         GenresImgAuthor.src = x.src;
         let arrImgLink = x.src.split("/");
         let arrImg = arrImgLink[arrImgLink.length - 1].split('.');
@@ -175,10 +190,11 @@ $('.playlist-header').on('click', function (e) {
     }
 });
 $('.close-bio').on('click', function(){
-    $(".genre_container").fadeToggle("slow");
+    $(".bio_container").fadeToggle("slow");
 });
 $('.genres-btn').on('click', function(){
-    $(".genre_container").toggle("slow");
+    $(".genre_container").fadeToggle("slow");
+    $(".bio_container").fadeToggle("slow");
 });
 currentTrack.addEventListener('timeupdate', ShowCurrenTimeSong);
 let volume = document.getElementById('start');
@@ -208,3 +224,31 @@ currentTrack.currentTime = currentTrack.currentTime-10;
 function timeSongChangePlus () {
 currentTrack.currentTime = currentTrack.currentTime+10;
 };
+
+function compareNameFromAZ(a,b) {
+    if (a.name<b.name) return -1;
+    if (a.name>b.name) return 1;
+    return 0;
+}
+function compareNameFromZA(a,b) {
+    if (a.name<b.name) return 1;
+    if (a.name>b.name) return -1;
+    return 0;
+}
+function compareNameShuffle(a,b) {
+    if (a.name<b.name) return Math.random() - 0.5;
+    
+}
+let sortingSongs = document.querySelectorAll('.sortOf');
+for (let i=0; i < sortingSongs.length; i++) {
+    sortingSongs[i].addEventListener('change', chooseSort);
+}
+function chooseSort () {
+  let typeOfSort;
+if    (document.querySelectorAll('.sortOf')[0].value==0) {
+    getGenre (compareNameFromAZ) }
+ else if (document.querySelectorAll('.sortOf')[0].value==1) {
+getGenre (compareNameFromZA); }
+else if (document.querySelectorAll('.sortOf')[0].value==2) {
+getGenre (compareNameShuffle); }
+}
