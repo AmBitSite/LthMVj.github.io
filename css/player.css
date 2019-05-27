@@ -4,6 +4,7 @@
     align-items: center;
     background: radial-gradient(circle farthest-corner at 100px 50px,#352A3B, #FBF2EB);
     width:70vw;
+    height: 30vh
 }
 .player-btn__pause {
 	display: none;
@@ -77,3 +78,11 @@
     transition: width 500ms ease-in-out;
     border:none;
 }
+
+
+#canvas {
+    display: block;
+    width: 70vw;
+    height: 63vh;
+}
+

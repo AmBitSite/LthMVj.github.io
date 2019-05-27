@@ -1,4 +1,5 @@
 .bio_container{
+    position: absolute;
     background-size: cover;
     overflow: auto;  
     width: 70vw;

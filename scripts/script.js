@@ -115,7 +115,6 @@ function getGenre(typeOfSort) {
 };
 
 function nextTrack() {
-    
     let currentTrackParent = document.querySelector('.track_active');
     let parentSong = currentTrackParent.nextElementSibling;
     if (parentSong !== null) {
@@ -216,6 +215,7 @@ $('.playlist-header').on('click', function(e) {
 });
 $('.close-bio').on('click', function() {
     $(".bio_container").fadeToggle("slow");
+    $('#canvas').fadeIn('slow');
 });
 $('.genres-btn').on('click', function() {
     $(".genre_container").toggle("slow");
